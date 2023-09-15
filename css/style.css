@@ -1,0 +1,717 @@
+/*****==================Start Global ====================*****/
+* {
+  list-style: none !important;
+  text-decoration: none !important;
+}
+
+.main-color {
+  background: #f25454;
+}
+
+.btn-hover {
+  transition: 0.5s;
+}
+
+.btn-hover:hover {
+  background: #FF6565;
+}
+
+.pargraph-items {
+  color: #666666;
+  font-size: .8rem;
+  line-height: 19.2px;
+  font-weight: 400;
+}
+
+.side-title {
+  color: var(--title-color);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+:root {
+  --main-color: #f25454;
+  --black-color: #000;
+  --title-color: #212529;
+  --paragraph-title-color: #6C757D;
+  --bars-color: #e9ecef;
+  --bars-label: #777;
+  --border-input: #eee;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.title p {
+  max-width: 800px;
+  margin: auto;
+  color: var(--paragraph-title-color);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+.title h3 {
+  font-size: 80px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
+}
+
+.title h2 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--title-color);
+  position: relative;
+}
+
+.title h2::after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background-color: var(--black-color);
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.5s;
+}
+
+.title:hover h2::after {
+  width: 70px;
+}
+
+
+/***** =================End Global=================== *****/
+
+
+
+
+
+
+/*****==================Start Navbar ====================*****/
+.active {
+  color: var(--main-color) !important;
+}
+
+.nav-bars a {
+  color: var(--black-color);
+  font-size: .82rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.nav-bars a:hover {
+  color: var(--main-color);
+}
+
+.nav-bars li {
+  padding-inline: 10px;
+}
+
+.social a {
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+/***** =================End Navbar=================== *****/
+
+
+
+
+/*****==================Start Home ====================*****/
+
+#firstSlider {
+  width: 100%;
+  background: red;
+  height: 100vh;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100vh;
+}
+
+.prev-control {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: transparent;
+  outline: none !important;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom-right-radius: 4px;
+  color: #fff;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-layer {
+  content: '';
+  width: 100% !important;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  left: -50PX;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.prev-control:hover .btn-layer,
+.next-control:hover .btn-layer {
+  left: 0;
+  opacity: 1;
+}
+
+.prev-control:hover i,
+.next-control:hover i {
+  color: var(--main-color) !important;
+  position: relative;
+  z-index: -1;
+}
+
+
+.next-control {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  background: transparent;
+  outline: none !important;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-top-right-radius: 4px;
+  color: #fff;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+
+.sett-btn {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  background-color: #212529;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.sett-btn:hover {
+  background-color: #000000a1;
+}
+
+.scrol-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  width: 30px;
+  height: 55px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  z-index: 120;
+  transform: translateX(50%);
+  cursor: pointer;
+  transition: border 0.4s;
+}
+
+.scrol-btn:hover {
+  border: 1px solid var(--main-color);
+}
+
+.scrol-btn:hover .ball {
+  background-color: var(--main-color);
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: scroll 2s infinite linear;
+}
+
+@keyframes scroll {
+  0% {
+    top: 15%;
+    opacity: 0;
+  }
+
+  20% {
+    top: 35%;
+    opacity: 0.5;
+  }
+
+  40% {
+    top: 55%;
+    opacity: 0.9;
+  }
+
+  60% {
+    top: 75%;
+    opacity: 0.1;
+  }
+
+  80% {
+    top: 95%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/***** =================End Home=================== *****/
+
+
+/*****==================Start ABout ====================*****/
+#About .about-text p {
+  color: var(--title-color);
+  font-size: 14.4px;
+  line-height: 21.6px;
+  font-weight: 400;
+}
+
+.bars-1 {
+  width: 90%;
+  height: 5px;
+  background-color: var(--bars-color);
+}
+
+.bars-1 .layer-bars {
+  width: 80%;
+  background-color: var(--main-color);
+  height: 100%;
+}
+
+.layer-bars span {
+  bottom: 2px;
+  right: 0;
+}
+
+.bars span {
+  color: var(--bars-label);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.bars-1 .layer-2 {
+  width: 95%;
+}
+
+.bars-1 .layer-3 {
+  width: 85%;
+}
+
+.bars-1 .layer-4 {
+  width: 70%;
+}
+
+/***** =================End ABout=================== *****/
+
+
+
+/*****==================Start OurTeam ====================*****/
+#ourteam .card img {
+  transition: 0.5s;
+}
+
+#ourteam .card-hover:hover .layer-team {
+  opacity: 1;
+}
+
+#ourteam .card-hover:hover .card-text h5 {
+  color: #f25454d9;
+}
+
+.card-text p {
+  color: var(--paragraph-title-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#ourteam .card-hover:hover img {
+  transform: scale(1.2);
+}
+
+#ourteam .layer-team {
+  width: 100%;
+  height: 100%;
+  background-color: #f25454d9;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer-team .social i {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+/***** =================End OurTeam=================== *****/
+
+
+
+
+
+/*****==================Start Services ====================*****/
+.title-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  left: 65px;
+
+}
+
+.pargraph-items {
+  padding: 0 0 0 65px;
+}
+
+.service-item:hover h3 {
+  color: var(--main-color);
+}
+
+.title-item h3::before {
+  font-weight: 900;
+  content: "\f109";
+  font-family: "Font Awesome 5 Free";
+  font-size: 24px;
+  /* background: red; */
+  position: absolute;
+  top: 0;
+  left: -50px;
+  color: var(--main-color);
+}
+
+.title-item-2 h3::before {
+  content: "\f2c2";
+}
+
+.title-item-3 h3::before {
+  content: "\f15c";
+}
+
+.title-item-4 h3::before {
+  content: "\f5ae";
+}
+
+.title-item-5 h3::before {
+  content: "\f013";
+}
+
+.title-item-6 h3::before {
+  content: "\f03d";
+}
+
+.title-item-7 h3::before {
+  content: "\f2b4";
+}
+
+.title-item-8 h3::before {
+  content: "\f590";
+}
+
+.title-item-9 h3::before {
+  content: "\f1de";
+}
+
+
+
+/***** =================End Services=================== *****/
+
+
+
+/*****==================Start Client-Review ====================*****/
+#client-review {
+  padding: 80px 0;
+}
+
+#client-review .slide {
+  background-color: #777;
+  overflow: hidden;
+}
+
+#client-review .slide button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-indent: 0;
+  overflow: hidden;
+}
+
+#client-review .slide .active {
+  overflow: hidden;
+  transform: scale(1.3);
+  transition: 0.4s;
+}
+
+
+
+
+#client-review .slide p {
+
+  color: var(--paragraph-title-color);
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 10px 200px;
+  text-align: center;
+  max-width: 950px;
+  margin: auto;
+}
+
+#client-review .slide p::before {
+  font-weight: 900;
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-size: 24px;
+
+}
+
+#client-review .slide p::after {
+  font-weight: 900;
+  content: "\f10e";
+  font-family: "Font Awesome 5 Free";
+  font-size: 24px;
+}
+
+/***** =================End Client-Review=================== *****/
+
+
+
+/*****==================Start Get In Touch====================*****/
+#contact {
+  padding: 80px 0;
+}
+
+.text-area {
+  width: 100%;
+  height: 100px;
+}
+
+.btn-form {
+  background-color: var(--main-color);
+  color: #fff;
+  width: 30%;
+  padding: 15px 0;
+  border: none;
+
+}
+
+form input,
+.text-area {
+  border: 2px solid var(--border-input);
+  opacity: 0.7;
+  outline: transparent 2px solid;
+  transition: 0.5s;
+}
+
+input:focus,
+.text-area:focus {
+  outline: var(--main-color) 2px solid;
+}
+
+.info-data span i {
+  color: var(--main-color);
+  font-size: 32px;
+}
+
+
+.info-data p,
+.info-data p a {
+  color: var(--paragraph-title-color);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/***** =================End Get In Touch=================== *****/
+
+
+
+/*****==================Start Footer====================*****/
+.icons {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.footer-info {
+  margin-top: 80px;
+}
+
+.btn-footer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f25454b3;
+  position: absolute;
+  top: -115%;
+  left: 10px;
+  transition: 0.5s;
+}
+
+.btn-footer:hover {
+  background-color: var(--main-color);
+}
+
+
+.footer {
+  background: url(../image/dotted-map.png);
+  background-size: contain;
+  background-color: #222;
+}
+
+.footer-text p,
+.links li a {
+  color: #ffffff80;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 5px 0;
+}
+
+.links li a:hover {
+  color: var(--main-color);
+}
+
+.row-link div {
+  border: 1px solid white;
+  margin-bottom: 10px;
+  margin: 10px;
+  text-align: center;
+  transition: 0.5s;
+
+}
+
+.pop-tag a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  width: fit-content !important;
+  display: inline-block;
+  padding: 5px 20px;
+}
+
+.row-link div:hover {
+  border: 1px solid var(--main-color);
+}
+
+.addres {
+  max-width: 200px;
+
+}
+
+.link-socail a i {
+  color: #fff;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+
+.link-socail a i:hover {
+  color: var(--main-color);
+}
+
+.copy p {
+  color: #6c757d;
+}
+
+.last-footer {
+  background-color: #1a1a1a;
+}
+
+/***** =================End Footer=================== *****/
+
+
+/***** media Quary *****/
+
+@media (max-width: 576px) {
+  .quation {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .quation button {
+    padding: 10px !important;
+  }
+
+  .social-copy {
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .links {
+    text-align: center;
+  }
+
+  .btn-footer {
+    top: -145%;
+  }
+
+  .addres {
+    margin: auto;
+  }
+
+
+  .links {
+    padding: 10px 0;
+  }
+
+  .icons {
+    top: 5%;
+  }
+
+
+}
+
+@media (max-width: 991.98px) {
+  #client-review .slide button {
+    width: 40px;
+    height: 40px;
+  }
+
+  #client-review .slide p {
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    padding: 0px 80px;
+    text-align: center;
+  }
+
+  #client-review .slide p::before {
+    font-size: 10px;
+  }
+
+  #client-review .slide p::after {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .btn-form {
+    width: 70%;
+  }
+}
+
+/* **** End media Quary **** */
